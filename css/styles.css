@@ -50,8 +50,10 @@ button {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  /* width: 1158px;
+  padding: 0 15px; */
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -242,7 +244,7 @@ header {
 /* Features */
 
 .features {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .features-subtitle {
@@ -262,7 +264,8 @@ header {
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .icon-wrapper {
@@ -281,7 +284,7 @@ header {
 
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .team-title {
@@ -296,7 +299,8 @@ header {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .team-name-text {
@@ -305,6 +309,9 @@ header {
 }
 
 .team-list-item {
+  /* width: calc((100% - 28px)/1); */
+  max-width: 264px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -374,21 +381,19 @@ header {
 /* Portfolio */
 
 .portfolio {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-
-.portfolio-list li {
-  width: calc((100% - 2 * 24px) / 3);
+  flex-direction: column;
+  /* column-gap: 24px;
+  row-gap: 48px; */
+  gap: 48px;
 }
 
 .portfolio-list-item {
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -467,12 +472,13 @@ header {
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-logo {
@@ -503,7 +509,10 @@ header {
 }
 
 .footer-logo-text {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 
 .social-text {
@@ -541,14 +550,25 @@ header {
 }
 
 .footer-social-wrapper {
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 
 /* Footer form */
 
 .footer-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
+  align-items: center;
+}
+
+.footer-form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-form-input {
