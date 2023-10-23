@@ -948,6 +948,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .footer-container {
+    max-width: 552px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -956,10 +957,6 @@ header {
 
   .footer-form {
     flex-direction: row;
-  }
-
-  .footer-logo-text, .footer-form-wrap {
-    margin-left: 92px;
   }
 
   .footer-logo-text {
@@ -982,12 +979,9 @@ header {
 
 @media screen and (min-width: 1158px) {
   .footer-container {
+    max-width: 1158px;
     flex-wrap: nowrap;
     align-items: baseline;
-  }
-
-  .footer-logo-text, .footer-form-wrap {
-    margin-left: 0;
   }
 
   .footer-logo-text {
