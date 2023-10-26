@@ -91,7 +91,7 @@ header {
   font-weight: 700;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-right: 76px;
+  padding: 16px 0;
 }
 
 .header-accent {
@@ -114,7 +114,7 @@ header {
 }
 
 .header-nav-list {
-  display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -143,6 +143,7 @@ header {
   position: absolute;
   bottom: -1px;
   transition: background-color 250ms;
+  display: none;
 }
 
 .header-link::after {
@@ -153,6 +154,7 @@ header {
   position: absolute;
   bottom: -1px;
   transition: background-color 250ms;
+  display: none;
 }
 
 .header-link:hover::after,
@@ -169,10 +171,11 @@ header {
 
 .header-address {
   font-style: normal;
+  /* display: none; */
 }
 
 .header-address-list {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 40px;
 }
@@ -184,6 +187,133 @@ header {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-open-btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #fff;
+  padding: 72px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 200ms;
+}
+
+.menu-close-btn {
+  padding: 0;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e9fc;
+  fill: #2e2f42;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn:active,
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  border: none;
+  background-color: #404bbf;
+  fill: #ffffff;
+}
+
+.menu-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mob-link {
+  color: #2E2F42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; 
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.mob-special-link {
+  color: #404bbf;
+}
+
+.mob-link:active,
+.mob-link:focus {
+  color: #404bbf;
+}
+
+.mob-address {
+  font-style: normal;
+  margin-bottom: 48px;
+}
+
+.mob-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.mob-address-item {
+  color:  #434455;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; 
+  letter-spacing: 0.02em;
+}
+
+.mob-address-item:active,
+.mob-address-item:focus {
+  color: #4D5AE5;
+}
+
+.mob-social-list {
+  display: flex;
+  gap: 40px;
+}
+
+.mob-social-item {
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+  border-radius: 50%;
+}
+
+.mob-social-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Main */
@@ -853,6 +983,50 @@ header {
   background-color: #404bbf;
 }
 
+/* Header tablet and desktop */
+
+@media screen and (min-width: 768px) {
+  .header-nav-list {
+    display: flex;
+  }
+
+  .header-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .menu-open-btn {
+    display: none;
+  }
+
+  .header-logo {
+    margin-right: 120px;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-nav-list {
+    display: flex;
+  }
+
+  .header-address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+  .menu-open-btn {
+    display: none;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+    padding: 0;
+  }
+}
+
 /* Hero tablet and desktop */
 
 @media screen and (min-width: 768px) {
@@ -1065,6 +1239,8 @@ header {
   }
 }
 
+/* Modal window tablet and desktop */
+
 @media screen and (min-width: 768px), screen and (min-width: 1158px) {
   .modal {
     width: 408px;
@@ -1095,4 +1271,6 @@ header {
     align-items: baseline;
   }
 }
+
+
 
