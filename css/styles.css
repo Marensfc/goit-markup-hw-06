@@ -1025,6 +1025,14 @@ header {
     margin-right: 76px;
     padding: 0;
   }
+
+  .special-link::after {
+    display: block;
+  }
+
+  .header-link::after {
+    display: block;
+  }
 }
 
 /* Hero tablet and desktop */
